@@ -9,7 +9,6 @@ def load_sprites():
     # Cria o caminho em String ex "C:/Users/fulano/Documents/game/assets/images"
     # resolve problemas de importação relativa
     imgs_path = os.path.join("assets", "imgs")
-    print(imgs_path)
     # os.listdir(path) -> cria uma lista String com os nomes dos arquivos dentro do caminho
     for file in os.listdir(imgs_path):
         # para cada arquivo no diretório ele cria uma Surface, e adiciona ao dict com a key sendo o nome do arquivo sem o ".png, .jgp"

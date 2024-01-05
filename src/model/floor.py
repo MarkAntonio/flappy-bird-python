@@ -5,6 +5,8 @@ import configs
 
 
 class Floor(pygame.sprite.Sprite):
+    _VELOCITY = 2
+    
     def __init__(self, index, *groups):
         self._layer = Layer.FLOOR
         self.image = assets.get_image('floor')
@@ -14,7 +16,7 @@ class Floor(pygame.sprite.Sprite):
         super().__init__(*groups)
 
     def update(self):
-        self.rect.x -= 2
+        self.rect.x -= self._VELOCITY
 
         if self.rect.right <= 0:
             self.rect.x = configs.SCREEN_WIDTH
